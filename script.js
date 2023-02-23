@@ -4,20 +4,21 @@ const navLinks = document.querySelectorAll('.navbar a');
 // Add a click event listener to each navigation link
 navLinks.forEach(link => {
     link.addEventListener('click', event => {
-        // Prevent the default link behavior
         event.preventDefault();
 
-        // Get the target section from the link's href attribute
         const targetId = link.getAttribute('href');
-        console.log('Target ID:', targetId);
-
-        // Scroll to the target section using smooth scrolling
         const targetElement = document.querySelector(targetId);
-        console.log('Target element:', targetElement);
-        targetElement.scrollIntoView({
-            behavior: 'smooth'
-        });
+        targetElement.scrollIntoView({ behavior: 'smooth' });
     });
+});
+
+// Learn more button scrolls to the about section
+const learnMoreButton = document.querySelector('.home-text a');
+const aboutSection = document.querySelector('#about');
+
+learnMoreButton.addEventListener('click', event => {
+    event.preventDefault();
+    aboutSection.scrollIntoView({ behavior: 'smooth' });
 });
 
 // Get all company links

@@ -45,6 +45,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
 }
 
 .navbar {
@@ -87,6 +88,13 @@ nav {
     min-height: 100vh;
 }
 
+.home-text {
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    margin-bottom: 10rem;
+}
+
 .small-header {
     margin: 0 0 15px 4px;
     color: rgb(100, 255, 218);
@@ -97,6 +105,7 @@ nav {
 
 .big-header {
     margin-top: 0;
+    margin-bottom: 1rem;
     font-size: clamp(40px, 8vw, 80px);
     line-height: normal;
 }
@@ -141,7 +150,6 @@ nav {
 
 .about-container {
     display: flex;
-    margin-top: 5rem;
     width: 100%;
 }
 
