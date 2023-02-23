@@ -1,13 +1,8 @@
 /* Global styles */
 
-/* Apply box-sizing: border-box to all elements for consistent sizing */
 * {
-    -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
-    color: rgb(136, 146, 176);
-    display: block;
-    font-family: Calibre, Inter, "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
-    font-size: 20px;
+    -webkit-font-smoothing: antialiased;
 }
 
 :root {
@@ -21,25 +16,10 @@ body {
     line-height: 1.5;
     color: var(--slate);
     background-color: var(--navy);
-    -webkit-font-smoothing: antialiased;
     display: block;
-    box-sizing: border-box;
-    height: auto;
-    line-height: auto;
-    margin-bottom: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
-    max-width: auto;
-    min-height: auto;
-    padding-bottom: 0px;
-    padding-left: auto;
-    padding-right: auto;
-    padding-top: 0px;
-    width: auto;
+    justify-content: center;
 }
 
-/* Apply basic styling to hyperlinks */
 a {
     color: #fff;
     text-decoration: none;
@@ -55,12 +35,10 @@ header {
     background-color: #1F1B2B;
     padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: auto;
-    z-index: 1;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 nav {
@@ -69,7 +47,6 @@ nav {
     align-items: center;
 }
 
-/* Style the navigation bar*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -108,27 +85,20 @@ nav {
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url(../images/bg.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .small-header {
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 15px;
-    margin-left: 4px;
-    color: rgb(100,255,218);
+    margin: 0 0 15px 4px;
+    color: rgb(100, 255, 218);
     font-family: var(--font-mono);
     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
     font-weight: 400;
-
 }
 
 .big-header {
-    margin-top: 0px;
+    margin-top: 0;
     font-size: clamp(40px, 8vw, 80px);
+    line-height: normal;
 }
 
 .home-text p {
@@ -136,7 +106,6 @@ nav {
     margin-bottom: 2rem;
     color: rgba(255, 255, 255, 0.8);
     opacity: 0.8;
-    /* Add a slight transparency effect */
 }
 
 .home-text a {
@@ -164,13 +133,10 @@ nav {
 .about {
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
-    flex-direction: row;
-    padding: 5rem 5rem;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 15px;
-    margin-left: 4px;
+    flex-direction: column;
+    padding: 1rem 1rem;
 }
 
 .about-container {
@@ -183,6 +149,7 @@ nav {
     width: 50%;
     flex-direction: column;
     padding: 2rem 2rem;
+    text-align: left;
 }
 
 .about-text h2 {
@@ -197,13 +164,13 @@ nav {
     font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.8);
     opacity: 0.8;
-    /* Add a slight transparency effect */
 }
 
 .about-image {
-    flex: 1;
-    width: 45%;
+    width: 50%;
+    height: 0;
     float: right;
+    position: relative;
 }
 
 .about-image img {
@@ -212,41 +179,55 @@ nav {
     border-radius: 10px;
 }
 
+/* Job styles */
+
 .company-box {
-    flex: 1;
     text-align: center;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: rgb(136, 146, 176);
-    float: left;
-    width: 52%;
+    width: 50%;
+    height: 0;
+    padding-bottom: 49%;
+    top: 0;
+    left: 0;
+    position: relative;
 }
 
 .company-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .company-list li {
-    margin: 10px 0;
+    margin: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    padding-bottom: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease-in-out;
 }
 
 .company-link {
-    color: #333;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
 }
 
-.company-link:hover {
-    text-decoration: underline;
+.company-list li:hover {
+    background-color: #333;
+    color: #fff;
 }
 
 .job-info {
-    display: none;
     margin-top: 20px;
+    font-size: 14px;
+    display: block;
 }
 
 .job-info.show {
@@ -255,73 +236,70 @@ nav {
 
 .job-info h3 {
     margin-top: 0;
+    font-size: 16px;
+    font-weight: bold;
 }
+
 
 /* Contact styles */
 
 .contact {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    padding: 5rem 5rem;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 15px;
-    margin-left: 4px;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    padding-top: 10rem;
 }
 
-.contact-text {
-    width: 50%;
-    padding-right: 2rem;
-}
-
-.contact-text h2 {
+.contact-header {
     margin-bottom: 1.5rem;
     font-size: 2rem;
     font-weight: bold;
     color: #fff;
+    margin-left: 32rem;
 }
 
-.contact-text p {
-    margin-bottom: 2rem;
+.contact-body {
+    margin-bottom: 0.5rem;
     font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.8);
     opacity: 0.8;
-    /* Add a slight transparency effect */
-}
-
-.contact-icons {
-    width: 50%;
-}
-
-.contact-icons img {
-    width: 50px;
-    height: 50px;
-    margin-right: 1rem;
-}
-
-.contact-icons a {
-    color: #fff;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-}
-
-.contact-icons a:hover {
-    color: #5f4edd;
-}
-
-.contact-icons a:last-child {
-    margin-bottom: 0;
-}
-
-/* Footer styles */
-
-footer {
-    background-color: #1F1B2B;
-    padding: 1rem;
     text-align: center;
-    color: #fff;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 60px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;;
+}
+
+.fa-github {
+    background: #333;
+    color: white;
+}
+
+.fa-github:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-linkedin:hover {
+  opacity: 0.7;
+}
+
+.fa-id-card {
+    background: #333;
+    color: white;
+}
+
+.fa-id-card:hover {
+  opacity: 0.7;
 }
