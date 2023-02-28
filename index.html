@@ -7,24 +7,33 @@
         <title>Name</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <header>
             <!--Navigation Bar-->
-            <nav>
-                <div class="logo">Logo</div>
-                <ul class="navbar">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <!--Generic Burger Menu-->
-                <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Logo</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarMenu">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </header>
             <section id ="home" class="home">
@@ -55,7 +64,7 @@
                         <div class="job-info" data-company="company1" style="display:none">
                             <h3>Software Recruiter - Hatch IT - 06/21 - Present</h3>
                             <ul class="job-info">
-                                <li>Sourced potential candidates through various methods, including job
+                                <li>Sourced potential software engineering candidates through various methods, including job
                                 boards, social media, and employee referrals</li>
                                 <li>Used Python to automate everyday tasks and improve productivity by 50%</li>
                                 <li>Collaborated with account managers to understand clients' technical requirements to identify top talent</li>
@@ -101,5 +110,8 @@
             <p>&copy; 2023 Personal Website</p>
         </footer>
         <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
 </html>

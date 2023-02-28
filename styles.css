@@ -29,6 +29,63 @@ h3 {
     font-weight: 600;
 }
 
+
+  /* CSS styles for mobile devices */
+@media (max-width: 850px) {
+  body {
+    font-size: 14px;
+  }
+  .navbar {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .home-text {
+    padding: 2rem 1rem;
+  }
+  .home-text h1 {
+    font-size: 2rem;
+  }
+  .home-text h2 {
+    font-size: 3rem;
+  }
+  .home-text h3 {
+    font-size: 1.5rem;
+  }
+  .home-text p {
+    font-size: 1rem;
+  }
+  .about-text {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  .about-image {
+    width: 100%;
+    float: none;
+    margin-bottom: 1rem;
+  }
+  .company-box {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .company-list li {
+    margin: 1rem 0;
+    border: none;
+    padding: 0;
+  }
+
+  .company-link {
+    font-weight: normal;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+}
+
+
 /* Header styles */
 
 header {
