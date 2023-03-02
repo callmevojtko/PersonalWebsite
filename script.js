@@ -21,34 +21,26 @@ learnMoreButton.addEventListener('click', event => {
     aboutSection.scrollIntoView({ behavior: 'smooth' });
 });
 
-// Get all company links
-const companyLinks = document.querySelectorAll('.company-link');
+  // Get all job info sections
+  const jobInfoSections = document.querySelectorAll('.job-info');
 
-// Add a click event listener to each company link
-companyLinks.forEach(link => {
-    link.addEventListener('click', event => {
-        // Prevent the default link behavior
-        event.preventDefault();
+  // Loop through each company link and add a click event listener
+  const companyLinks = document.querySelectorAll('.card-link');
+  companyLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      // Prevent the default behavior of anchor links
+      event.preventDefault();
 
-        // Get the target company from the link's data attribute
-        const targetCompany = link.dataset.company;
+      // Get the data-company attribute value of the clicked link
+      const company = link.getAttribute('data-company');
 
-        // Hide the company list
-        const companyList = document.querySelector('.company-list');
-        companyList.style.display = 'none';
+      // Hide all job info sections
+      jobInfoSections.forEach(section => {
+        section.style.display = 'none';
+      });
 
-        // Show the job info for the selected company
-        const jobInfo = document.querySelector(`.job-info[data-company="${targetCompany}"]`);
-        jobInfo.style.display = 'block';
-
-        // Add a back button to allow the user to return to the company list
-        const backButton = document.createElement('button');
-        backButton.innerHTML = 'Back';
-        backButton.addEventListener('click', () => {
-            companyList.style.display = 'block';
-            jobInfo.style.display = 'none';
-            backButton.remove();
-        });
-        jobInfo.appendChild(backButton);
+      // Show the job info section that corresponds to the clicked link
+      const jobInfoSection = document.querySelector(`.job-info[data-company="${company}"]`);
+      jobInfoSection.style.display = 'block';
     });
-});
+  });

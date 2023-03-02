@@ -14,7 +14,6 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: var(--slate);
     background-color: var(--navy);
     display: block;
     justify-content: center;
@@ -79,6 +78,12 @@ nav {
 
 /* Home styles */
 
+.jumbotron {
+    background-size: cover;
+    background-position: center;
+    background-color: var(--navy);
+}
+
 .home {
     display: flex;
     justify-content: center;
@@ -99,6 +104,10 @@ nav {
     margin-top: 0;
     font-size: clamp(40px, 8vw, 80px);
     line-height: normal;
+}
+
+.home-text {
+    text-align: center;
 }
 
 .home-text p {
@@ -128,116 +137,151 @@ nav {
     color: #5f4edd;
 }
 
+@media (max-width: 576px) {
+    .small-header {
+        font-size: 1.5rem;
+    }
+
+    .big-header {
+        font-size: 3rem;
+    }
+
+    .jumbotron {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .small-header {
+        font-size: 2.5rem;
+    }
+
+    .big-header {
+        font-size: 5rem;
+    }
+
+    .jumbotron {
+        margin-bottom: 4rem;
+    }
+}
+
 /* About styles */
 
 .about {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 1rem 1rem;
-}
-
-.about-container {
-    display: flex;
-    margin-top: 5rem;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 3rem;
 }
 
 .about-text {
-    width: 50%;
-    flex-direction: column;
-    padding: 2rem 2rem;
-    text-align: left;
+  width: 50%;
+  padding: 2rem;
+  text-align: left;
 }
 
 .about-text h2 {
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #fff;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
 }
 
 .about-text p {
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.8);
-    opacity: 0.8;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 0.8;
 }
 
 .about-image {
-    width: 50%;
-    height: 0;
-    float: right;
-    position: relative;
+  width: 50%;
+  margin-left: 2rem;
+  max-width: 600px;
+  height: 0;
+  position: relative;
 }
 
 .about-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  float: right;
 }
 
-/* Job styles */
-
-.company-box {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: rgb(136, 146, 176);
-    width: 50%;
-    height: 0;
-    padding-bottom: 49%;
-    top: 0;
-    left: 0;
-    position: relative;
+@media screen and (max-width: 768px) {
+  
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-text {
+    width: 80%;
+  }
+  
+  .about-image {
+    width: 80%;
+    margin-left: 0;
+  }
 }
 
-.company-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
+/* Card styles */
+
+.card {
+  margin-top: 2rem;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-.company-list li {
-    margin: 1.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    padding-bottom: 7px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.2s ease-in-out;
+.card-title {
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
-.company-link {
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.company-list li:hover {
-    background-color: #333;
-    color: #fff;
+.card-link {
+  font-weight: bold;
 }
 
 .job-info {
-    margin-top: 20px;
-    font-size: 14px;
-    display: block;
+  margin-top: 1.5rem;
 }
 
-.job-info.show {
-    display: block;
+.job-info h6 {
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-.job-info h3 {
-    margin-top: 0;
-    font-size: 16px;
-    font-weight: bold;
+@media only screen and (max-width: 767px) {
+  .list-group {
+    flex-direction: column;
+  }
+
+  .list-group-item {
+    margin: 0.5rem 0;
+  }
+
+  .job-info {
+    margin-top: 1rem;
+  }
+
+  .card-text {
+    padding: 0.5rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .job-info h6 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .job-info li {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
 
@@ -303,3 +347,4 @@ nav {
 .fa-id-card:hover {
   opacity: 0.7;
 }
+
