@@ -28,72 +28,64 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link text-light px-3" href="#home">Home</a>
+                                <a class="nav-link text-light px-3" href=".home-scroll">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-light px-3" href="#about">About</a>
+                                <a class="nav-link text-light px-3" href=".about">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-light px-3" href="#contact">Contact</a>
+                                <a class="nav-link text-light px-3" href=".contact">Contact</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
-            <section class="home jumbotron">
+            <div class="home-scroll">
+            <section style="background-color: #1f1f1f" class="home jumbotron">
                 <div class="container">
                     <div class="home-text">
                         <h1 class="small-header">Hi, my name is</h1>
-                        <h2 class="big-header" style="color: #1F1B2B">Brian Vojtko.</h2>
+                        <h2 class="big-header" style="color: #7b39d8">Brian Vojtko.</h2>
                         <h3 class="big-header">I like to solve problems.</h3>
-                        <p>I'm a technical recruiter looking to get into the world of software development. Nice to meet you!</p>
+                        <p style="color: #7b39d8">I'm a technical recruiter looking to get into the world of software development. Nice to meet you!</p>
                         <a href="#about" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </section>
+            </div>
             <section class="about">
                 <div class="about-text">
-                    <h2>About</h2>
-                    <div class="about-image">
-                        <img src="image.jpg" alt="Image">
-                    </div>
+                    <h2>Where I've Worked</h2>
+                </div>
+                <div class="about-company-box">
+                    <img src="image.jpg" alt="Image">
                     <div class="company-box">
                         <ul class="company-list">
-                            <li><a href="#" class="company-link" data-company="company1">Software Recruiter</a></li>
-                            <li><a href="#" class="company-link" data-company="company2">Freelance Software Developer</a></li>
+                            <li><a href="#" class="company-link" data-company="company1">Software Developer</a></li>
+                            <li><a href="#" class="company-link" data-company="company2">Software Recruiter</a></li>
                             <li><a href="#" class="company-link" data-company="company3">IAM Analyst II</a></li>
                             <li><a href="#" class="company-link" data-company="company4">IAM Analyst I</a></li>
                             <li><a href="#" class="company-link" data-company="company5">IT Site Support Analyst I</a></li>
                         </ul>
                         <div class="job-info" data-company="company1" style="display:none">
-                            <h3>Software Recruiter - Hatch IT - 06/2021 - Present</h3>
+                            <h3>Software Developer - Freelance - 04/2018 - Present</h3>
                             <ul class="job-info">
-                                <li>Sourced potential candidates through various methods, including job
-                                boards, social media, and employee referrals</li>
-                                <li>Used Python to automate everyday tasks and improve productivity by 50%</li>
+                                <li>Developed a user-friendly Chrome extension using Python, Flask, PostgreSQL, HTML, CSS, and JavaScript that enables efficient and accurate candidate-job matching based on their specific tech stack and years of experience. Hosted on AWS EC2.</li>
+                                <li>Designed and built an automated messaging tool using Python and Selenium for a LinkedIn Recruiter account that streamlines candidate outreach by automatically sending personalized messages to targeted candidates in a project's 'uncontacted' section.</li>
                                 <li>Collaborated with account managers to understand clients' technical requirements to identify top talent</li>
-                                <li>Provided regular updates and reports on recruiting activities, such as candidate pipelines, interview feedback, and
-                                other relevant metrics</li>
-                                <li>Maintained strong relationships with candidates and industry professionals to build a strong network for future
-                                recruiting efforts</li>
-                                <li>Researched market trends to identify potential candidates for future hiring needs and build a talent pipeline for key
-                                technical roles.</li>
+                                <li>Implemented an advanced X-ray search capability using Python and Selenium that utilizes Google search and web scraping techniques to extract key candidate information such as name, job title, current company, and LinkedIn profile URL and efficiently export data to a local CSV file for easy import into an ATS.</li>
                             </ul>
                         </div>
                         <div class="job-info" data-company="company2" style="display:none">
-                            <h3>Software Developer - Freelance - 04/2018 - Present</h3>
+                            <h3>Software Recruiter - Hatch IT - 06/2021 - 03/2023</h3>
                             <ul class="job-info">
-                                <li>Developed a user-friendly Chrome extension using Python, Flask, PostgreSQL, HTML, CSS, and JavaScript that enables
-                                efficient and accurate candidate-job matching based on their specific tech stack and years of experience. Hosted on AWS
-                                EC2.</li>
-                                <li>Designed and built an automated messaging tool using Python and Selenium for a LinkedIn Recruiter account that
-                                streamlines candidate outreach by automatically sending personalized messages to targeted candidates in a project's
-                                'uncontacted' section.</li>
+                                <li>Sourced potential candidates through various methods, including job boards, social media, and employee referrals</li>
+                                <li>Used Python to automate everyday tasks and improve productivity by 50%</li>
                                 <li>Collaborated with account managers to understand clients' technical requirements to identify top talent</li>
-                                <li>Implemented an advanced X-ray search capability using Python and Selenium that utilizes Google search and web scraping
-                                techniques to extract key candidate information such as name, job title, current company, and LinkedIn profile URL and 
-                                efficiently export data to a local CSV file for easy import into an ATS.</li>
+                                <li>Provided regular updates and reports on recruiting activities, such as candidate pipelines, interview feedback, and other relevant metrics</li>
+                                <li>Maintained strong relationships with candidates and industry professionals to build a strong network for future recruiting efforts</li>
+                                <li>Researched market trends to identify potential candidates for future hiring needs and build a talent pipeline for key technical roles.</li>
                             </ul>
                         </div>
                         <div class="job-info" data-company="company3" style="display:none">
@@ -108,11 +100,9 @@
                         <div class="job-info" data-company="company4" style="display:none">
                             <h3>IAM Analyst I - Integrated Project Services - 08/2019 - 12/2020</h3>
                             <ul class="job-info">
-                                <li>Automated everyday tasks using PowerShell to ensure appropriate user identities and credentials and controlled access to
-                                    various resources such as folders, shares, servers, and applications.</li>
+                                <li>Automated everyday tasks using PowerShell to ensure appropriate user identities and credentials and controlled access to various resources such as folders, shares, servers, and applications.</li>
                                 <li>Created and maintained security and distribution groups within Active Directory and provided user access upon approval.</li>
-                                <li>Updated and applied multiple security policies and standard operating procedures essential to proper workflow and
-                                guidelines.</li>
+                                <li>Updated and applied multiple security policies and standard operating procedures essential to proper workflow and guidelines.</li>
                                 <li>Managed user credentials, licenses, and groups inside Microsoft Azure.</li>
                             </ul>
                         </div>
@@ -120,11 +110,11 @@
                             <h3>IT Site Support Analyst I - Integrated Project Services - 04/2019 - 08/2019</h3>
                             <ul class="job-info">
                                 <li>Provided first-line PC hardware and software support through ManageEngine ServiceDesk+ to in-office and remote employees.</li>
-                                <li>Investigated and resolved software and hardware issues for all users in a fast-paced environment and ensured maximum
-                                    uptime and productivity for the end user</li>
+                                <li>Investigated and resolved software and hardware issues for all users in a fast-paced environment and ensured maximum uptime and productivity for the end user</li>
                                 <li>Applied company domain image to new computers and assigned and documented each to new employees</li>
                             </ul>
                         </div>
+                    </div>
                 </div>
             </section>
             <section class="contact">
