@@ -1,7 +1,5 @@
-// Select all the navigation links
+// Smooth scroll Nav
 const navLinks = document.querySelectorAll('.navbar a');
-
-// Add a click event listener to each navigation link
 navLinks.forEach(link => {
     link.addEventListener('click', event => {
         event.preventDefault();
@@ -10,6 +8,16 @@ navLinks.forEach(link => {
         const targetElement = document.querySelector(targetId);
         targetElement.scrollIntoView({ behavior: 'smooth' });
     });
+});
+
+// Hides Navbar when click in mobile menu
+const navbarCollapse = document.querySelector('.navbar-collapse');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth < 992) {
+      navbarCollapse.classList.remove('show');
+    }
+  });
 });
 
 // Learn More button scrolls to the About section
@@ -22,34 +30,45 @@ learnMoreButton.addEventListener('click', event => {
 });
 
 
-// Get all company links
+// Inserts a back button after the <br> element
 const companyLinks = document.querySelectorAll('.company-link');
+const companyList = document.querySelector('.company-list');
+const jobInfos = document.querySelectorAll('.job-info');
 
-// Add a click event listener to each company link
 companyLinks.forEach(link => {
-    link.addEventListener('click', event => {
-        // Prevent the default link behavior
-        event.preventDefault();
+  link.addEventListener('click', event => {
+    event.preventDefault();
 
-        // Get the target company from the link's data attribute
-        const targetCompany = link.dataset.company;
+    // Get the target company from the link's data attribute
+    const targetCompany = link.dataset.company;
 
-        // Hide the company list
-        const companyList = document.querySelector('.company-list');
-        companyList.style.display = 'none';
+    // Hide the company list
+    companyList.style.display = 'none';
 
-        // Show the job info for the selected company
-        const jobInfo = document.querySelector(`.job-info[data-company="${targetCompany}"]`);
-        jobInfo.style.display = 'block';
+    // Show the job info for the selected company
+    jobInfos.forEach(info => {
+      if (info.dataset.company === targetCompany) {
+        info.style.display = 'block';
 
         // Add a back button to allow the user to return to the company list
         const backButton = document.createElement('button');
+        backButton.classList.add('back-button');
         backButton.innerHTML = 'Back';
         backButton.addEventListener('click', () => {
-            companyList.style.display = 'block';
-            jobInfo.style.display = 'none';
-            backButton.remove();
+          companyList.style.display = 'block';
+          info.style.display = 'none';
+          backButton.remove();
         });
-        jobInfo.appendChild(backButton);
+
+        // Insert the back button after the <br> element
+        const br = info.querySelector('ul');
+        if (br) {
+          br.insertAdjacentElement('afterend', backButton);
+        } else {
+          info.appendChild(backButton);
+        }
+      };
     });
+  });
 });
+
