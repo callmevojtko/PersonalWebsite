@@ -12,14 +12,15 @@ navLinks.forEach(link => {
     });
 });
 
-// Learn more button scrolls to the about section
+// Learn More button scrolls to the About section
 const learnMoreButton = document.querySelector('.home-text a');
-const aboutSection = document.querySelector('#about');
+const aboutSection = document.querySelector('.about');
 
 learnMoreButton.addEventListener('click', event => {
     event.preventDefault();
     aboutSection.scrollIntoView({ behavior: 'smooth' });
 });
+
 
 // Get all company links
 const companyLinks = document.querySelectorAll('.company-link');
