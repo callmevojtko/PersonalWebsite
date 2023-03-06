@@ -72,7 +72,6 @@ header {
 }
 
 .home-video {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -120,7 +119,8 @@ header {
 p {
   font-size: 20px;
   margin-bottom: 40px;
-  color: #fff;
+  color: #3dee2990;
+  font-weight: bold;
 }
 
 .learn-button {
