@@ -1,8 +1,8 @@
-.pdf
-CNAME
-/assets/breakpoints.min.js
-/assets/jquery.min.js
-/assets/jquery.scrollex.min.js
-/assets/jquery.scrolly.min.js
-/assets/browser.min.js
-/assets/sass
+*.pdf
+/CNAME
+assets/js/breakpoints.min.js
+assets/js/browser.min.js
+assets/js/jquery.min.js
+assets/js/jquery.scrollex.min.js
+assets/js/jquery.scrolly.min.js
+assets/sass
