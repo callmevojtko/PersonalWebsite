@@ -1,289 +1,148 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <!--Metadata-->
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Brian Vojtko</title>
-        <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,600;0,700;1,500&display=swap" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <header>
-            <!-- Navigation Bar -->
-            <nav class="navbar navbar-expand-md navbar-dark">
-                <div class="container">
-                    <a class="navbar-brand" href=".home"></a>    
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#navbarNav"
-                        aria-controls="navbarNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href=".home"
-                                    >Home</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href=".about"
-                                    >About</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link text-light px-3"
-                                    href=".contact"
-                                    >Contact</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <div class="home">
-            <section class="jumbotron">
-                <div class="background-video">
-                    <video autoplay loop muted playsinline>
-                        <source src="background.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="container">
-                    <div class="hero-text">
-                        <h1 class="header-small">Hi, my name is</h1>
-                        <h2 class="header-large">Brian Vojtko</h2>
-                        <h3 class="header-medium">I like to solve problems.</h3>
-                        <p class="intro-text">I'm a technical recruiter looking to get into the world of software development.
-                            Nice to meet you!</p>
-                        <a href=".about" class="cta-button">Learn More</a>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <section class="about">
-            <div class="container">
-                <div class="about-text">
-                    <h2 class="section-title">Where I've Worked</h2>
-                </div>
-                <div class="work-experience">
-                    <div class="company-list">
-                        <img src="image.jpg" alt="Image" class="company-logo" />
-                        <ul>
-                            <li><a href="#" class="company-link" data-company="company1">Software Developer</a></li>
-                            <li><a href="#" class="company-link" data-company="company2">Software Recruiter</a></li>
-                            <li><a href="#" class="company-link" data-company="company3">IAM Analyst II</a></li>
-                            <li><a href="#" class="company-link" data-company="company4">IAM Analyst I</a></li>
-                            <li><a href="#" class="company-link" data-company="company5">IT Site Support Analyst I</a></li>
-                        </ul>
-                    </div>
-                    <div class="job-info" data-company="company1" style="display: none">
-                        <h3>
-                            Software Developer - Freelance - 04/2018 - Present
-                        </h3>
-                        <ul class="job-info">
-                            <li>
-                                Developed a user-friendly Chrome extension using
-                                Python, Flask, PostgreSQL, HTML, CSS, and
-                                JavaScript that enables efficient and accurate
-                                candidate-job matching based on their specific
-                                tech stack and years of experience. Hosted on
-                                AWS EC2.
-                            </li>
-                            <br>
-                            <li>
-                                Designed and built an automated messaging tool
-                                using Python and Selenium for a LinkedIn
-                                Recruiter account that streamlines candidate
-                                outreach by automatically sending personalized
-                                messages to targeted candidates in a project's
-                                'uncontacted' section.
-                            </li>
-                            <br>
-                            <li>
-                                Implemented an advanced X-ray search capability
-                                using Python and Selenium that utilizes Google
-                                search and web scraping techniques to extract
-                                key candidate information such as name, job
-                                title, current company, and LinkedIn profile URL
-                                and efficiently export data to a local CSV file
-                                for easy import into an ATS.
-                            </li>
-                            <br>
-                        </ul>
-                    </div>
-                    <div class="job-info" data-company="company2" style="display: none">
-                        <h3>
-                            Software Recruiter - Hatch IT - 06/2021 - 03/2023
-                        </h3>
-                        <ul class="job-info">
-                            <li>
-                                Sourced software engineering candidates through various
-                                methods, including but not limited to LinkedIn, Indeed,
-                                GitHub, Stack Overflow, and other job boards as well
-                                multiple social media platforms.
-                            </li>
-                            <br>
-                            <li>
-                                Built Python scripts to automate everyday tasks such as 
-                                email management and candidate sourcing to help
-                                improve productivity. 
-                            </li>
-                            <br>
-                            <li>
-                                Collaborated with account managers to understand
-                                clients' technical requirements to identify top
-                                talent
-                            </li>
-                            <br>
-                            <li>
-                                Provided regular updates and reports on
-                                recruiting activities, such as candidate
-                                pipelines, interview feedback, and other
-                                relevant metrics
-                            </li>
-                            <br>
-                            <li>
-                                Researched market trends to identify potential
-                                candidates for future hiring needs and build a
-                                talent pipeline for key technical roles.
-                            </li>
-                            <br>
-                        </ul>
-                    </div>
-                    <div class="job-info" data-company="company3" style="display: none">
-                        <h3>
-                            IAM Analyst II - Integrated Project Services -
-                            12/2020 - 06/2021
-                        </h3>
-                        <ul class="job-info">
-                            <li>
-                                Oversaw all helpdesk tickets relating to user
-                                access requests and adjustments.
-                            </li>
-                            <br>
-                            <li>
-                                Audited and updated company policies relating to user
-                                access and permissions as well as general IT security
-                            </li>
-                            <br>
-                            <li>
-                                Automated entire onboarding and offboarding procedure
-                                using Powershell and a custom-built web application
-                            </li>
-                            <br>
-                            <li>
-                                Managed 1500+ user credentials, licenses, and groups
-                                inside Microsoft Azure.
-                            </li>
-                            <br>
-                        </ul>
-                    </div>
-                    <div class="job-info" data-company="company4" style="display: none">
-                        <h3>
-                            IAM Analyst I - Integrated Project Services -
-                            08/2019 - 12/2020
-                        </h3>
-                        <ul class="job-info">
-                            <li>
-                                Automated everyday tasks using PowerShell to
-                                ensure appropriate user identities and
-                                credentials and controlled access to various
-                                resources such as folders, shares, servers, and
-                                applications.
-                            </li>
-                            <br>
-                            <li>
-                                Created and maintained security and distribution
-                                groups within Active Directory and provided user
-                                access upon approval.
-                            </li>
-                            <br>
-                            <li>
-                                Updated and applied multiple security policies
-                                and standard operating procedures essential to
-                                proper workflow and guidelines.
-                            </li>
-                            <br>
-                            <li>
-                                Managed user credentials, licenses, and groups
-                                inside Microsoft Azure.
-                            </li>
-                            <br>
-                        </ul>
-                    </div>
-                    <div class="job-info" data-company="company5" style="display: none">
-                        <h3>
-                            IT Site Support Analyst I - Integrated Project
-                            Services - 04/2019 - 08/2019
-                        </h3>
-                        <ul class="job-info">
-                            <li>
-                                Provided first-line PC hardware and software
-                                support through ManageEngine ServiceDesk+ to over 1000
-                                total in-office and remote employees.
-                            </li>
-                            <br>
-                            <li>
-                                Investigated and resolved software and hardware
-                                issues for all users in a fast-paced environment
-                                and ensured maximum uptime and productivity for
-                                the end user
-                            </li>
-                            <br>
-                            <li>
-                                Applied company domain image to new computers
-                                and assigned and documented each to new
-                                employees
-                            </li>
-                            <br>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="contact">
-            <h2 class="contact-header">Contact</h2>
-            <p class="contact-body">Get in touch!</p>
-            <div class="fa">
-                <a
-                    href="https://github.com/callmevojtko"
-                    class="fa fa-github"
-                ></a>
-                <a
-                    href="https://www.linkedin.com/in/brianvojtko"
-                    class="fa fa-linkedin"
-                ></a>
-                <a
-                    href="BrianVojtko - Resume 2023.pdf"
-                    download
-                    class="fa fa-id-card"
-                ></a>
-            </div>
-        </section>
-        <footer>
-            <p>&copy; Brian Vojtko 2023</p>
-        </footer>
-        <script src="script.js"></script>
-    </body>
+	<head>
+		<title>Brian Vojtko</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
+					<h1 id="logo"><a href="#">Brian Vojtko</a></h1>
+					<p>A Software Recruiter<br />
+					turned Software Developer</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one" class="active">About</a></li>
+						<li><a href="#two">Things I Can Do</a></li>
+						<li><a href="#three">A Few Accomplishments</a></li>
+						<li><a href="#four">Contact</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="https://github.com/callmevojtko" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://linkedin.com/in/brianvojtko" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="mailto:vojtko.brian@yahoo.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="image main" data-position="center">
+									<img src="images/banner.jpg" alt=""/>
+								</div>
+								<div class="container">
+									<header class="major">
+										<h2>Hi.</h2>
+										<p>I'm <a href="BrianVojtko - Resume 2023.pdf"download>Brian Vojtko</a>.</p>
+									</header>
+									<p>Just a dude who likes dogs, sports, and coding (unless it's Java). Let's connect!</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="container">
+									<h3>Things I Can Do</h3>
+									<br>
+									<ul class="feature-icons">
+										<li class="icon solid fa-code">Full Stack Development</li>
+										<li class="icon solid fa-cubes">Database Management</li>
+										<li class="icon solid fa-book">Technical Documentation</li>
+										<li class="icon solid fa-coffee">Drink too much coffee</li>
+									</ul>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="container">
+									<h3>A Few Accomplishments</h3>
+									<p>Check out some of my projects</p>
+									<div class="features">
+										<article>
+											<a href="https://github.com/callmevojtko/Recommended-Bets-By-Email-MLB" class="image"><img src="images/github-pic.png" alt="" /></a>
+											<div class="inner">
+												<h4>MLB Bet Emailer</h4>
+												<p>A simple machine learning project that uses Random Forest Regressor to predict the winning spread of baseball games
+												based on sportsbook lines. The project fetches data from The Odds API, preprocesses it using pandas, trains a model
+												using scikit-learn, and sends an email with the day's recommended bets using the Gmail API.</p>
+											</div>
+										</article>
+										<article>
+											<a href="https://github.com/callmevojtko/JobJabber" class="image"><img src="images/github-pic.png" alt="" /></a>
+											<div class="inner">
+												<h4>JobJabber</h4>
+												<p>JobJabber is a job matching platform that connects recruiters with potential candidates using advanced automation and
+												data-driven techniques.</p>
+											</div>
+										</article>
+										<article>
+											<a href="https://github.com/callmevojtko/Recruiting-Job-Matcher" class="image"><img src="images/github-pic.png" alt="" /></a>
+											<div class="inner">
+												<h4>LinkedIn Job Matcher</h4>
+												<p>Google Chrome extension that reads a candidates tech stack and years of experience and displays clients jobs that are a
+												fit</p>
+											</div>
+										</article>
+									</div>
+								</div>
+							</section>
+
+						<!-- Four -->
+							<section id="four">
+								<div class="container">
+									<h3>Contact Me</h3>
+									<form method="post" action="mailto:vojtko.brian@yahoo.com">
+										<div class="row gtr-uniform">
+											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" required/></div>
+											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" required/></div>
+											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" required/></div>
+											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6" re></textarea></div>
+											<div class="col-12">
+												<ul class="actions">
+													<li><input type="submit" class="primary" value="Send Message" /></li>
+													<li><input type="reset" value="Reset Form" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+								</div>
+							</section>
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Brian Vojtko 2023</li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
